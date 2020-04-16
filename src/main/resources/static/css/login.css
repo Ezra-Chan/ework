@@ -1,0 +1,292 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.app{
+  width: 100%;
+  height: 100%;
+  min-width: 1360px;
+  overflow-x: auto;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+
+.login .header {
+  width: 100%;
+  height: 140px;
+  line-height: 140px;
+  position: relative;
+  z-index: 1;
+}
+.login .header .logo {
+  position: relative;
+  left: 230px;
+  top: 40px;
+  display: flex;
+  width: 100px;
+}
+.login .header .title {
+  width: 530px;
+  position: absolute;
+  top: 15px;
+  left: 350px;
+  font-size: 40px;
+  font-family: PingFang-SC;
+  font-weight: bold;
+  color: #fff;
+  line-height: 90px;
+}
+.login .loginModule {
+  width: 524px;
+  min-width: 524px;
+  height: 575px;
+  min-height: 575px;
+  background-color: #fff;
+  z-index: 1;
+  display: flex;
+  position: absolute;
+  top: 20%;
+  left: 60%;
+  border-radius: 30px;
+  box-shadow: 0px 0px 30px #0d2cb8;
+}
+
+.login .loginModule .loginTitle {
+  font-size: 36px;
+  font-family: PingFang-SC;
+  font-weight: bold;
+  color: #4F93FE;
+  line-height: 40px;
+  position: absolute;
+  top: 90px;
+  left: 222px;
+  margin: 0;
+}
+.login .loginModule .loginStyle {
+  display: flex;
+  position: absolute;
+  top: 150px;
+  left: 100px;
+}
+.login .loginModule .loginStyle .accountLogin {
+  font-size: 24px;
+  font-family: PingFang SC;
+  font-weight: normal;
+  color: #4F93FE;
+  line-height: 40px;
+  cursor: pointer;
+}
+.login .loginModule .loginStyle .faceRecognitionLogin {
+  font-size: 24px;
+  font-family: PingFang SC;
+  font-weight: normal;
+  color: #999;
+  line-height: 40px;
+  cursor: pointer;
+}
+.login .loginModule .loginStyle .divider {
+  width: 2px;
+  height: 20px;
+  background: #999;
+  position: relative;
+  top: 11px;
+  margin: 0 20px;
+}
+.login .loginModule .accountPassword input {
+  border: none;
+  border-bottom: 2px solid #eee;
+  left: 137.6px;
+  height: 50px;
+  width: 300px;
+  outline: none;
+  font-size: 20px;
+}
+.login .loginModule .accountPassword ::-webkit-input-placeholder {
+  color: #999;
+  font-size: 20px;
+  font-family: PingFang SC;
+  font-weight: 500;
+  line-height: 90px;
+  position: relative;
+}
+.login .loginModule .accountPassword .account {
+  position: absolute;
+  top: 240px;
+}
+.login .loginModule .accountPassword .account .accountLogo {
+  position: absolute;
+  left: 80px;
+}
+.login .loginModule .accountPassword .account .accountInput {
+  position: absolute;
+  top: -10px;
+}
+.login .loginModule .accountPassword .passwords {
+  position: absolute;
+  top: 320px;
+}
+.login .loginModule .accountPassword .passwords .passwordLogo {
+  position: absolute;
+  left: 80px;
+}
+.login .loginModule .accountPassword .passwords .passwordInput {
+  position: absolute;
+  top: -10px;
+}
+.login .loginModule .accountPassword .verificationCode {
+  position: absolute;
+  top: 400px;
+}
+.login .loginModule .accountPassword .verificationCode .verificationCodeLogo {
+  position: absolute;
+  left: 80px;
+}
+.login .loginModule .accountPassword .verificationCode .verificationCodeInput {
+  position: absolute;
+  top: -10px;
+  width: 150px;
+}
+.login .loginModule .accountPassword .verificationCode .verificationCodeImg {
+  position: absolute;
+  left: 300px;
+  top: -17px;
+  width: 137px;
+  height: 60px;
+  border-radius: 3px;
+}
+.login .loginModule .submit {
+  position: absolute;
+  top: 490px;
+  left: 149px;
+  width: 226px;
+  height: 44px;
+  border-radius: 10px;
+  font-size: 28px;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #fff;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+  background-color: #2d8cf0;
+  border-color: #57a3f3;
+}
+.login .centerBgc {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 28.89%;
+}
+.login .centerBgc .cityBgc {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  opacity: 0.3;
+}
+.login .centerBgc .bgcImg {
+  height: 67.04%;
+  position: absolute;
+  left: 231px;
+  top: -11%;
+  min-height: 724px;
+}
+.alert-danger {
+  position: absolute;
+  display: block;
+  width: 45%;
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  padding: 15px;
+}
+.alert {
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.thisimg:HOVER {
+  cursor: pointer;
+}
+.test:FOCUS {
+  border-color: #66afe9 !important;
+}
+.modal-body {
+  position: relative;
+  padding: 15px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 3px 9px rgba(0,0,0,.5);
+}
+.modal-error .icon {
+  color: #f27474;
+  border: 3px solid #f27474;
+}
+.modal-body .icon {
+  height: 80px;
+  width: 80px;
+  margin: 20px auto;
+  border-radius: 50%;
+  color: #d2691e;
+  border: 3px solid #d2691e;
+  text-align: center;
+  font-size: 44px;
+}
+.modal-body .icon .glyphicon {
+  top: 6px;
+}
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.modal-p {
+  margin: 20px auto;
+}
+.modal-body .modal-p p {
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+  padding-top: 8px;
+  font-weight: 300;
+}
+.modal-p .btn {
+  width: 100px;
+  height: 40px;
+}
+.btn{
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.btn-default {
+  border-color: #ccc;
+}
+.login .loginModule .errorMessage{
+  position: absolute;
+  display: none;
+  left: 150px;
+  top: 27px;
+}
+.faceVideo{
+  position:relative;
+  top: 180px;
+  left: 88px;
+}
+.faceCanvas{
+  position:relative;
+  top: 100px;
+  display: none
+}
+.submit{
+  position:relative;
+  top: 186px;
+  right: 170px;
+}
