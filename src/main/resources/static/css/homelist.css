@@ -206,7 +206,7 @@ li {
 	margin-top: 20px;
 	background: transparent;
 }
-#smallDiv li {
+.smallDiv li {
 	text-align: center;
 	border: 3px solid transparent;
 	display: block;
@@ -216,12 +216,28 @@ li {
 	margin-bottom: 2px;
 }
 
-#smallDiv a {
+.smallDiv a {
 	color: #b8c7ce;
 	font-size: 16px;
 }
+
+.smallLogo{
+	height: 42px;
+	filter: brightness(2);
+	display: flex;
+	float: left;
+	margin: 0 10px;
+}
+
+.smallDiv .logoName{
+	float: right;
+	display: flex;
+	color: white;
+	font-size: 40px;
+	margin: 8px
+}
 /* 
-#smallDiv li:hover {
+.smallDiv li:hover {
 	border-left: 3px solid #00a65a;
 } */
 body{

@@ -30,6 +30,8 @@ a:hover{
   top: 40px;
   display: flex;
   width: 100px;
+  -webkit-filter: brightness(2);
+  filter: brightness(2);
 }
 .login .header .title {
   width: 530px;

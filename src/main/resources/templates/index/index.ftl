@@ -39,7 +39,8 @@
 	<div class="main">
 		<div class="container-fluid">
 			<div class="row">
-				<#include "/common/leftlist.ftl"> <!--顶层左侧的导航栏，栅格系统分10份-->
+				<#include "/common/leftlist.ftl">
+				<!--顶层左侧的导航栏，栅格系统分10份-->
 				<div class="col-md-10 moredeep" style="padding: 0; margin: 0;">
 					<!-- 导航栏 -->
 					<#include "/common/navlist.ftl">
