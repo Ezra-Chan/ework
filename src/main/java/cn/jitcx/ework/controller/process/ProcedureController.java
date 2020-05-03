@@ -882,7 +882,6 @@ public class ProcedureController {
 			}
 			
 			return "redirect:/xinxeng";
-			
 		}
 	//离职申请
 	@RequestMapping("resign")

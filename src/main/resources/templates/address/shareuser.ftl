@@ -9,8 +9,9 @@
 			<tr class="row">
 				<th class=" col-xs-1">
 				</th>
-				<th class=" col-xs-1"><span class="labels"
-					style="display: block;"></span></th>
+				<th class=" col-xs-1">
+					<span class="labels" style="display: block;"></span>
+				</th>
 				<th class=" col-xs-2 b">部门</th>
 				<th class="col-xs-2 b">职位</th>
 				<th class="col-xs-2 b">姓名</th>
@@ -21,8 +22,13 @@
 		<tbody>
 			<#list users as user>
 			<tr class="row">
-				<td class=" col-xs-1"><span class="labels"><label>
-					<input name="id" type="checkbox" userId="${user.userId}"><i>✓</i></label></span>
+				<td class=" col-xs-1">
+					<span class="labels">
+						<label>
+							<input name="id" type="checkbox" userId="${user.userId}">
+							<i>✓</i>
+						</label>
+					</span>
 				</td>
 				<td class=" col-xs-1">
 					<span class="imgs center-block">

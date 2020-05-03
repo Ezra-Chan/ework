@@ -9,7 +9,16 @@
     <div class="col-md-12 list-left" style="background: #222d32; height: 845px">
         <div class="user-panel">
             <div class="pull-left">
-                <img src="/image/${(user.imgPath)!'/timg.jpg'}" class="img-circle user-image-left" />
+                <#--用户头像-->
+                <#if user.imgPath?? && user.imgPath!=''  >
+                <#--如果用户上传过头像，则显示用户自己的头像-->
+                    <img class="img-circle user-image-left"
+                         src="/image/${user.imgPath}" />
+                <#else>
+                <#--如果用户没有上传过头像，则显示默认头像-->
+                    <img class="img-circle user-image-left"
+                         src="images/timg.jpg" alt="images"/>
+                </#if>
             </div>
             <div class="pull-left info">
                 <p style="color: #fff; line-height: 1.5;">

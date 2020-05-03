@@ -34,7 +34,6 @@
 						<#else>
 							<img class="img-circle" src="images/timg.jpg" alt="images" style="width:24px;height:24px"/>
 						</#if>
-<#--						<img src="/image/${(du.director.imagePath)!'timg.jpg'}" class="img-circle" style="width:24px;height:24px"/>-->
 						<span> ${du.director.userName},${du.director.phoneNumber}</span>
 					</a>
 					共享给了:

@@ -216,6 +216,7 @@ public class UserpanelController {
 		String projectPath = ClassUtils.getDefaultClassLoader().getResource("").getPath();
 		String startpath = new String(URLDecoder.decode(request.getRequestURI(), "utf-8"));
 		String path = startpath.replaceFirst("/image","");
+		System.out.println(path);
 		File f = new File(path);
 		
 		ServletOutputStream sos = response.getOutputStream();

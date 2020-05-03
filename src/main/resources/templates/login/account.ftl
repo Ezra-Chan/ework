@@ -1,5 +1,5 @@
 <div>
-    <form action="logins" method="post" onsubmit="return check();">
+    <form action="logins" method="post" onsubmit="return check();" onkeydown="keyLogin();">
         <div class="accountPassword">
             <div class="account">
                 <img src="images/account.png" alt="账号logo" class="accountLogo">
@@ -18,3 +18,9 @@
         <button class="submit" type="submit">登 录</button>
     </form>
 </div>
+<script>
+    function keyLogin(){
+        if (event.keyCode==13)  //回车键的键值为13
+            $(".submit").click(); //调用登录按钮的登录事件
+    }
+</script>
