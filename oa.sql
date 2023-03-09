@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : local
+ Source Server         : root
  Source Server Type    : MySQL
- Source Server Version : 50720
+ Source Server Version : 50710
  Source Host           : localhost:3306
  Source Schema         : oa
 
  Target Server Type    : MySQL
- Target Server Version : 50720
+ Target Server Version : 50710
  File Encoding         : 65001
 
- Date: 02/03/2018 14:28:18
+ Date: 09/03/2023 11:34:54
 */
 
 SET NAMES utf8mb4;
@@ -105,7 +105,7 @@ CREATE TABLE `aoa_attends_list` (
   PRIMARY KEY (`attends_id`),
   KEY `FKaxgqsm98npnl1rxysh9upfjee` (`attends_user_id`),
   CONSTRAINT `FKaxgqsm98npnl1rxysh9upfjee` FOREIGN KEY (`attends_user_id`) REFERENCES `aoa_user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of aoa_attends_list
@@ -144,6 +144,8 @@ INSERT INTO `aoa_attends_list` VALUES (45, '172.31.17.170', '迟到了 尴尬', 
 INSERT INTO `aoa_attends_list` VALUES (46, NULL, NULL, NULL, 46, NULL, 7, NULL, NULL, 3, '2017-10-19');
 INSERT INTO `aoa_attends_list` VALUES (47, '172.31.17.170', NULL, '2017-10-21 16:18:39', 11, 8, 3, '16:18', '星期六', 0, NULL);
 INSERT INTO `aoa_attends_list` VALUES (48, '192.168.1.233', NULL, '2017-10-22 10:28:57', 11, 8, 7, '10:28', '星期日', NULL, NULL);
+INSERT INTO `aoa_attends_list` VALUES (49, '10.15.100.6', NULL, '2021-08-20 10:17:41', 11, 8, 1, '10:17', '星期五', NULL, NULL);
+INSERT INTO `aoa_attends_list` VALUES (50, '127.0.0.1', NULL, '2022-01-26 10:42:36', 11, 8, 1, '10:42', '星期三', NULL, NULL);
 COMMIT;
 
 -- ----------------------------
@@ -198,7 +200,7 @@ CREATE TABLE `aoa_catalog` (
   PRIMARY KEY (`catalog_id`),
   KEY `FKbsk5nkjlqmd8j9rmkarse6j1x` (`cata_user_id`),
   CONSTRAINT `FKbsk5nkjlqmd8j9rmkarse6j1x` FOREIGN KEY (`cata_user_id`) REFERENCES `aoa_user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of aoa_catalog
@@ -319,7 +321,7 @@ CREATE TABLE `aoa_dept` (
   `end_time` datetime DEFAULT NULL,
   `start_time` datetime DEFAULT NULL,
   PRIMARY KEY (`dept_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of aoa_dept
@@ -502,7 +504,7 @@ BEGIN;
 INSERT INTO `aoa_discuss_list` VALUES (1, NULL, 'fdsfasfdsfasfsa', '2017-09-29 21:48:28', NULL, 'fsda', 19, 12, 1, NULL, '2017-09-29 21:48:28');
 INSERT INTO `aoa_discuss_list` VALUES (6, NULL, '富士达奥奥奥奥奥奥奥奥奥奥奥奥奥奥奥奥奥奥奥奥奥奥奥奥奥奥奥奥奥', '2017-09-29 21:48:28', NULL, 'what????', 20, 7, 2, NULL, '2017-10-04 18:06:39');
 INSERT INTO `aoa_discuss_list` VALUES (7, NULL, '发生地方撒范德萨反反复复付付付付付付付付付付付付8', '2017-09-30 13:07:03', NULL, '发生富士达', 19, 20, 2, NULL, '2017-10-05 22:58:38');
-INSERT INTO `aoa_discuss_list` VALUES (8, NULL, 'fsdaaaaaaaaaaaaaaafsaaaaaaaaaaa', '2017-09-30 13:12:33', NULL, '同一人', 19, 29, 2, NULL, '2017-10-05 22:59:02');
+INSERT INTO `aoa_discuss_list` VALUES (8, NULL, 'fsdaaaaaaaaaaaaaaafsaaaaaaaaaaa', '2017-09-30 13:12:33', NULL, '同一人', 19, 30, 2, NULL, '2017-10-05 22:59:02');
 INSERT INTO `aoa_discuss_list` VALUES (9, NULL, '发生的多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多', '2017-09-30 13:16:51', NULL, '范德萨', 20, 11, 2, NULL, '2017-09-30 13:07:03');
 INSERT INTO `aoa_discuss_list` VALUES (12, NULL, 'fsdaaaaaaaaaaaaaaafsaaaaaaaaaaa', '2017-09-30 15:30:26', NULL, '修改了这个名字2333', 19, 96, 2, NULL, '2017-10-04 21:24:09');
 INSERT INTO `aoa_discuss_list` VALUES (13, NULL, '<p>\r\n	今天还是不错的，完成了一些内容，比如：修复了分页的小bug；还有一些其他的东西；再把讨论区好好的晚上一下\r\n</p>', '2017-10-01 14:25:26', NULL, '第一天的公告,++小整合', 19, 339, 1, NULL, '2017-10-01 14:25:26');
@@ -597,7 +599,14 @@ CREATE TABLE `aoa_file_list` (
   KEY `FKlj6l9qroivus28aiqluue4bew` (`file_user_id`),
   CONSTRAINT `FKfshy9n300pqxjsweo9247jgqs` FOREIGN KEY (`path_id`) REFERENCES `aoa_file_path` (`path_id`),
   CONSTRAINT `FKlj6l9qroivus28aiqluue4bew` FOREIGN KEY (`file_user_id`) REFERENCES `aoa_user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=130 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+
+-- ----------------------------
+-- Records of aoa_file_list
+-- ----------------------------
+BEGIN;
+INSERT INTO `aoa_file_list` VALUES (1, 'qq.jpg(1).JPG', '/2021/08/罗密欧/c74b48da-3019-45df-9219-76acf2ddf67a.JPG', 'JPG', 'image/jpeg', NULL, 6, 136611, '2021-08-20 11:07:47', 1, 0, 0);
+COMMIT;
 
 -- ----------------------------
 -- Table structure for aoa_file_path
@@ -1021,7 +1030,7 @@ CREATE TABLE `aoa_notepaper` (
   PRIMARY KEY (`notepaper_id`),
   KEY `FKsavcqw29haox5bu7y90it8jb7` (`notepaper_user_id`),
   CONSTRAINT `FKsavcqw29haox5bu7y90it8jb7` FOREIGN KEY (`notepaper_user_id`) REFERENCES `aoa_user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of aoa_notepaper
@@ -1056,7 +1065,6 @@ INSERT INTO `aoa_notepaper` VALUES (33, '我们不一样', '2017-10-22 00:34:36'
 INSERT INTO `aoa_notepaper` VALUES (34, '我们不一样', '2017-10-22 00:34:37', '无标题', 1);
 INSERT INTO `aoa_notepaper` VALUES (35, '我们不一样', '2017-10-22 00:34:38', '无标题', 1);
 INSERT INTO `aoa_notepaper` VALUES (36, '我们不一样', '2017-10-22 00:34:40', '无标题', 1);
-INSERT INTO `aoa_notepaper` VALUES (37, '一万头草泥吗', '2017-10-22 00:35:47', '无标题', 1);
 COMMIT;
 
 -- ----------------------------
@@ -1544,7 +1552,7 @@ CREATE TABLE `aoa_reply_list` (
   KEY `FK2bn8fpyqw7mom14ks4kvrhtp9` (`reply_user_id`),
   CONSTRAINT `FK2bn8fpyqw7mom14ks4kvrhtp9` FOREIGN KEY (`reply_user_id`) REFERENCES `aoa_user` (`user_id`),
   CONSTRAINT `FK94s0c9f8hxomde6bede3d20y2` FOREIGN KEY (`discuss_id`) REFERENCES `aoa_discuss_list` (`discuss_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=89 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=90 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of aoa_reply_list
@@ -1603,6 +1611,7 @@ INSERT INTO `aoa_reply_list` VALUES (85, ' 哟哟；interesting', '2017-10-06 13
 INSERT INTO `aoa_reply_list` VALUES (86, ' 好吧，有趣', '2017-10-06 13:47:29', 37, 2);
 INSERT INTO `aoa_reply_list` VALUES (87, '你很有意思', '2017-10-06 14:22:59', 9, 2);
 INSERT INTO `aoa_reply_list` VALUES (88, '你也不错', '2017-10-06 14:23:18', 6, 2);
+INSERT INTO `aoa_reply_list` VALUES (89, '11111', '2021-08-13 17:40:39', 8, 1);
 COMMIT;
 
 -- ----------------------------
@@ -1700,7 +1709,7 @@ CREATE TABLE `aoa_role_` (
   `role_name` varchar(255) DEFAULT NULL,
   `role_value` int(11) DEFAULT NULL,
   PRIMARY KEY (`role_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of aoa_role_
@@ -2142,7 +2151,7 @@ CREATE TABLE `aoa_schedule_list` (
   PRIMARY KEY (`rc_id`),
   KEY `FKgcip21xf5ihmgm2bnh5o4jv15` (`user_id`),
   CONSTRAINT `FKgcip21xf5ihmgm2bnh5o4jv15` FOREIGN KEY (`user_id`) REFERENCES `aoa_user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of aoa_schedule_list
@@ -2680,41 +2689,40 @@ CREATE TABLE `aoa_user` (
   CONSTRAINT `FKadtg9xju7q1ijcyxlkl9gwv5t` FOREIGN KEY (`position_id`) REFERENCES `aoa_position` (`position_id`),
   CONSTRAINT `FKl738mmblfx0uia6671rl17cj9` FOREIGN KEY (`role_id`) REFERENCES `aoa_role_` (`role_id`),
   CONSTRAINT `FKt0vmot9xfbgq14oyij0gwh3gh` FOREIGN KEY (`dept_id`) REFERENCES `aoa_dept` (`dept_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of aoa_user
 -- ----------------------------
 BEGIN;
-INSERT INTO `aoa_user` VALUES (1, '湖南工业大学', '62175555555555444', '1986-02-03 00:00:00', '1057@qq.com', 0, '2017-09-22 19:35:40', '510322198602030429', '/22974ba8-4f7f-4166-b026-1fafa8afd923.jpg', 0, NULL, NULL, NULL, NULL, '123456', '小明', 2000, '湖南工业大学', '男', 'blue', '本科', '罗密欧', '好好', '13272143450', 1, 1, 1, 1, NULL, 'luomiou');
-INSERT INTO `aoa_user` VALUES (2, '中国广东', '12345', '1994-03-28 00:00:00', 'aaluoxiang@foxmail.com', 1, '2008-03-06 00:00:00', '510322199403280426', 'handsome.JPG', 0, NULL, NULL, NULL, NULL, '123456', '小梅', 1000, '中南大学', '女', 'green', '硕士', '朱丽叶', '天天向上', '13203318185', 1, 2, 2, 0, NULL, 'zhuliye');
-INSERT INTO `aoa_user` VALUES (3, '中国广东', '6217002940101998752', '1995-03-05 00:00:00', '255@qq.com', 2, '2009-05-24 00:00:00', '510322199503052485', 'eightman.jpeg', 0, NULL, NULL, NULL, NULL, '123456', '芳芳', 1000, '湖南大学', '女', 'yellow', '硕士', '伊丽莎白', '好学', '18683688154', 1, 3, 3, 0, NULL, 'yilishabai');
-INSERT INTO `aoa_user` VALUES (4, '清华大学', '6666', '1994-09-19 16:52:11', '164@qq.com', 3, '2013-09-19 16:52:40', '432524199612188018', 'fiveman.jpeg', 0, NULL, NULL, NULL, NULL, '123456', '李明', 3000, '清华大学', '男', 'red', '硕士', '小李父斯基', '天天努力', '18173328888', 2, 4, 4, 0, NULL, 'xiaolifusiji');
-INSERT INTO `aoa_user` VALUES (5, '中南大学', '7777', '1996-09-19 16:56:50', '173@126.com', 3, '2014-09-19 16:57:21', '432524199612188016', 'fourman.jpeg', 0, NULL, NULL, NULL, NULL, '123456', '小罗', 4000, '中南大学', '男', 'blue', '博士', 'soli', 'iinteresting', '18173328976', 3, 5, 4, 0, NULL, 'soli');
-INSERT INTO `aoa_user` VALUES (6, '泰山西路', '9999', '1997-09-19 16:59:29', '188@qq.com', 3, '2014-09-19 17:00:21', '432524199712188019', 'nineman.jpeg', 0, NULL, NULL, NULL, NULL, '123456', '小红', 3700, '上海交大', '女', 'green', '本科', '红之花', '每天美一点', '18868688866', 4, 6, 4, 0, NULL, 'hongzhihua');
-INSERT INTO `aoa_user` VALUES (7, '湖南工业大学', '6666', '2017-10-01 15:20:20', '188@qq.com', 3, '2017-10-05 15:20:39', '432524199712188020', 'oneman.jpeg', 0, NULL, NULL, NULL, NULL, '123456', '小喻', 5000, '湖南工业大学', '男', 'yellow', '本科', '甄姬', NULL, '13117336953', 5, 7, 4, 0, NULL, 'zhengji');
-INSERT INTO `aoa_user` VALUES (8, '中国广东', '62175555555555444', '2017-10-04 15:20:20', '188@qq.com', 4, '2017-10-02 15:20:39', '432524199712188021', 'sevenman.jpeg', 0, NULL, NULL, NULL, NULL, '123456', '小费', 5000, '湖南工业大学', '女', 'red', '本科', '甄姬2', NULL, '13117336954', 2, 10, 5, 0, NULL, 'zhengji2');
-INSERT INTO `aoa_user` VALUES (9, '中国广东', '5555444', '2017-10-03 14:23:10', '55@qq.com', 4, '2017-10-11 14:23:32', '432524199712188021', 'twoman.jpeg', 0, NULL, NULL, NULL, NULL, '123456', '小花', 3111, '湖南工业大学', '女', 'blue', '本科', '甄嬛', NULL, '13034507214', 2, 11, 5, 0, NULL, 'zhenghuan');
-INSERT INTO `aoa_user` VALUES (10, '清华大学', '4444', '2017-10-18 14:26:17', '66@qq.com', 4, '2017-10-07 14:26:37', '432524199712188021', 'handsome.JPG', 0, NULL, NULL, NULL, NULL, '123456', '花红', 2555, '湖大', '女', 'green', '本科', '无双', NULL, '13117336954', 2, 12, 5, 0, NULL, 'wushuang');
-INSERT INTO `aoa_user` VALUES (11, '中南大学', '6666', '2017-10-07 14:27:54', '1057@qq.com', 4, '2017-10-07 14:28:06', '5824566822688', 'threeman.jpeg', 0, NULL, NULL, NULL, NULL, '123456', '兰瑞', 5000, '中南', '男', 'yellow', '硕士', '瑞王', NULL, '13117336953', 2, 13, 5, 0, NULL, 'ruiwang');
-INSERT INTO `aoa_user` VALUES (12, '泰山西路', '62175555555555444', '1986-02-03 00:00:00', 'aaluoxiang@foxmail.com', 4, '2014-09-19 16:57:21', '510322198602030429', 'fiveman.jpeg', 0, NULL, NULL, NULL, NULL, '123456', '雨果', 2000, '湖南工业大学', '男', 'red', '本科', '丹琪', NULL, '13117336953', 2, 14, 5, 0, NULL, 'danqi');
-INSERT INTO `aoa_user` VALUES (13, '湖南工业大学', '12345', '1994-03-28 00:00:00', '255@qq.com', 4, '2014-09-19 17:00:21', '510322199403280426', 'fourman.jpeg', 0, NULL, NULL, NULL, NULL, '123456', '毛羽', 1000, '中南大学', '女', 'blue', '硕士', '于彤', NULL, '13117336954', 2, 15, 5, 0, NULL, 'yutong');
-INSERT INTO `aoa_user` VALUES (14, '中国广东', '123478', '1995-03-05 00:00:00', '164@qq.com', 5, '2017-10-05 15:20:39', '510322199503052485', 'nineman.jpeg', 0, NULL, NULL, NULL, NULL, '123456', '黑椰', 1000, '湖南大学', '女', 'green', '硕士', '盛如思', NULL, '18868688866', 3, 21, 5, 0, NULL, 'shengrusi');
-INSERT INTO `aoa_user` VALUES (15, '中国广东', '6666', '1994-09-19 16:52:11', '173@126.com', 5, '2017-10-02 15:20:39', '432524199612188018', 'oneman.jpeg', 0, NULL, NULL, NULL, NULL, '123456', '车寿山', 3000, '清华大学', '男', 'yellow', '硕士', '李楚堂', NULL, '13117336953', 3, 22, 5, 0, NULL, 'lichutang');
-INSERT INTO `aoa_user` VALUES (16, '清华大学', '7777', '1996-09-19 16:56:50', '188@qq.com', 5, '2017-10-11 14:23:32', '432524199612188016', 'sevenman.jpeg', 0, NULL, NULL, NULL, NULL, '123456', '白秋生', 4000, '中南大学', '男', 'red', '博士', '支晓璇', NULL, '13117336954', 3, 23, 5, 0, NULL, 'zhixiaoxuan');
-INSERT INTO `aoa_user` VALUES (17, '中南大学', '9999', '1997-09-19 16:59:29', '188@qq.com', 6, '2017-10-07 14:26:37', '432524199712188019', 'sixman.jpeg', 0, NULL, NULL, NULL, NULL, '123456', '饶子和', 3700, '上海交大', '女', 'blue', '本科', '薛邵琴', NULL, '13034507214', 4, 16, 5, 0, NULL, 'xueshanqin');
-INSERT INTO `aoa_user` VALUES (18, '泰山西路', '6666', '2017-10-01 15:20:20', '188@qq.com', 6, '2017-10-07 14:28:06', '432524199712188020', 'handsome.JPG', 0, NULL, NULL, NULL, NULL, '123456', '王秋阳', 5000, '湖南工业大学', '男', 'green', '本科', '光宇', NULL, '13117336954', 4, 17, 5, 0, NULL, 'guangyu');
-INSERT INTO `aoa_user` VALUES (19, '湖南工业大学', '62175555555555444', '2017-10-04 15:20:20', '55@qq.com', 6, '2014-09-19 16:57:21', '432524199712188021', '74c43897-d08b-409d-8b90-7fa3d681fef5.jpg', 0, NULL, NULL, NULL, NULL, '123456', '叶知秋', 5000, '湖南工业大学', '女', 'yellow', '本科', '朱茵', NULL, '13117336953', 4, 18, 5, 0, NULL, 'zhuyin');
-INSERT INTO `aoa_user` VALUES (20, '中国广东', '5555444', '2017-10-03 14:23:10', '66@qq.com', 6, '2014-09-19 16:57:21', '432524199712188021', 'fiveman.jpeg', 0, NULL, NULL, NULL, NULL, '123456', '刘湛秋', 3111, '湖南工业大学', '女', 'red', '本科', '朱颖', NULL, '13117336953', 4, 19, 5, 0, NULL, 'zhuyin');
-INSERT INTO `aoa_user` VALUES (21, '中国广东', '4444', '2017-10-18 14:26:17', '88@qq.com', 6, '2014-09-19 16:57:21', '432524199712188021', 'fourman.jpeg', 0, NULL, NULL, NULL, NULL, '123456', '李发友', 2555, '湖大', '女', 'blue', '本科', '杨晓木', NULL, '18868688866', 4, 20, 5, 0, NULL, 'yangxiaomu');
-INSERT INTO `aoa_user` VALUES (22, '清华大学', '6666', '2017-10-07 14:27:54', '1057@qq.com', 7, '2014-09-19 16:57:21', '5824566822688', 'nineman.jpeg', 0, NULL, NULL, NULL, NULL, '123456', '金燕西', 5000, '中南', '男', 'green', '硕士', '陈晓吉', NULL, '13117336953', 5, 8, 5, 0, NULL, 'chenxiaoji');
-INSERT INTO `aoa_user` VALUES (23, '中南大学', '6666\r\n62175555555555444\r\n12345', '2017-10-07 14:27:54', 'aaluoxiang@foxmail.com', 7, '2014-09-19 16:57:21', '25852255', 'oneman.jpeg', 0, NULL, NULL, NULL, NULL, '123456', '修璃', 6000, '中南', '女', 'yellow', '博士', '刘恋', '', '13117336954', 5, 9, 5, 0, NULL, 'liulian');
-INSERT INTO `aoa_user` VALUES (24, '中南大学', '6666\r\n62175555555555444\r\n12345', '2017-10-07 14:27:54', 'aaluoxiang@foxmail.com', 7, '2014-09-19 16:57:21', '25852255', 'fourman.jpeg', 0, NULL, NULL, NULL, NULL, '123456', '张柳', 6000, '中南', '女', 'yellow', '博士', '张柳', '', '13117336954', 5, 9, 5, 0, NULL, 'zhangliu');
-INSERT INTO `aoa_user` VALUES (25, '湖南工业大学', '62175555555555444', '2017-10-04 15:20:20', '55@qq.com', 6, '2014-09-19 16:57:21', '432524199712188021', '74c43897-d08b-409d-8b90-7fa3d681fef5.jpg', 0, NULL, NULL, NULL, NULL, '123456', '张秋', 5000, '湖南工业大学', '女', 'yellow', '本科', '张秋', NULL, '13117336953', 4, 18, 5, 0, NULL, 'zhangqiu');
-INSERT INTO `aoa_user` VALUES (26, '清华大学', '7777', '1996-09-19 16:56:50', '188@qq.com', 5, '2017-10-11 14:23:32', '432524199612188016', 'sevenman.jpeg', 0, NULL, NULL, NULL, NULL, '123456', '张秋生', 4000, '中南大学', '男', 'red', '博士', '张秋生', NULL, '13117336954', 3, 23, 5, 0, NULL, 'zhangqiusheng');
-INSERT INTO `aoa_user` VALUES (27, '中国广东', '4444', '2017-10-18 14:26:17', '88@qq.com', 6, '2014-09-19 16:57:21', '432524199712188021', 'fourman.jpeg', 0, NULL, NULL, NULL, NULL, '123456', '张宇', 2555, '湖大', '女', 'blue', '本科', '张宇', NULL, '18868688866', 4, 20, 5, 0, NULL, 'zhangyu');
-INSERT INTO `aoa_user` VALUES (28, '中国广东', '55555', '2017-10-14 21:51:42', '55@qq.com', 4, '2017-10-14 21:52:15', '432524199712188021', 'fourman.jpeg', 0, NULL, NULL, NULL, NULL, '123456', '薛之谦', 222, '湖大', '男', 'blue', '硕士', '上上签', NULL, '18868688866', 2, 10, 6, 0, NULL, 'shangshangqian');
-INSERT INTO `aoa_user` VALUES (35, 'wqasd', '6217002940101998752', '2017-10-16 00:00:00', 'qq@qq.com', NULL, '2017-10-16 00:00:00', '430602199501121115', NULL, 0, NULL, NULL, NULL, NULL, '123456', '总金办测试用户', 123213, 'asdas', '男', 'blue', 'qwewq', 'wuianan', NULL, '13600003532', 1, 2, 5, 0, NULL, NULL);
+INSERT INTO `aoa_user` VALUES (1, '湖南工业大学', '62175555555555444', '1986-02-03 00:00:00', '1057@qq.com', 0, '2017-09-22 19:35:40', '510322198602030429', '22974ba8-4f7f-4166-b026-1fafa8afd923.jpg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '小明', 2000, '湖南工业大学', '男', 'blue', '本科', '罗密欧', '好好', '13272143450', 1, 1, 1, 1, NULL, 'luomiou');
+INSERT INTO `aoa_user` VALUES (2, '中国广东', '12345', '1994-03-28 00:00:00', 'aaluoxiang@foxmail.com', 1, '2008-03-06 00:00:00', '510322199403280426', 'handsome.JPG', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '小梅', 1000, '中南大学', '女', 'green', '硕士', '朱丽叶', '天天向上', '13203318185', 1, 2, 2, 0, NULL, 'zhuliye');
+INSERT INTO `aoa_user` VALUES (3, '中国广东', '6217002940101998752', '1995-03-05 00:00:00', '255@qq.com', 2, '2009-05-24 00:00:00', '510322199503052485', 'eightman.jpeg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '芳芳', 1000, '湖南大学', '女', 'yellow', '硕士', '伊丽莎白', '好学', '18683688154', 1, 3, 3, 0, NULL, 'yilishabai');
+INSERT INTO `aoa_user` VALUES (4, '清华大学', '6666', '1994-09-19 16:52:11', '164@qq.com', 3, '2013-09-19 16:52:40', '432524199612188018', 'fiveman.jpeg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '李明', 3000, '清华大学', '男', 'red', '硕士', '小李父斯基', '天天努力', '18173328888', 2, 4, 4, 0, NULL, 'xiaolifusiji');
+INSERT INTO `aoa_user` VALUES (5, '中南大学', '7777', '1996-09-19 16:56:50', '173@126.com', 3, '2014-09-19 16:57:21', '432524199612188016', 'fourman.jpeg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '小罗', 4000, '中南大学', '男', 'blue', '博士', 'soli', 'iinteresting', '18173328976', 3, 5, 4, 0, NULL, 'soli');
+INSERT INTO `aoa_user` VALUES (6, '泰山西路', '9999', '1997-09-19 16:59:29', '188@qq.com', 3, '2014-09-19 17:00:21', '432524199712188019', 'nineman.jpeg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '小红', 3700, '上海交大', '女', 'green', '本科', '红之花', '每天美一点', '18868688866', 4, 6, 4, 0, NULL, 'hongzhihua');
+INSERT INTO `aoa_user` VALUES (7, '湖南工业大学', '6666', '2017-10-01 15:20:20', '188@qq.com', 3, '2017-10-05 15:20:39', '432524199712188020', 'oneman.jpeg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '小喻', 5000, '湖南工业大学', '男', 'yellow', '本科', '甄姬', NULL, '13117336953', 5, 7, 4, 0, NULL, 'zhengji');
+INSERT INTO `aoa_user` VALUES (8, '中国广东', '62175555555555444', '2017-10-04 15:20:20', '188@qq.com', 4, '2017-10-02 15:20:39', '432524199712188021', 'sevenman.jpeg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '小费', 5000, '湖南工业大学', '女', 'red', '本科', '甄姬2', NULL, '13117336954', 2, 10, 5, 0, NULL, 'zhengji2');
+INSERT INTO `aoa_user` VALUES (9, '中国广东', '5555444', '2017-10-03 14:23:10', '55@qq.com', 4, '2017-10-11 14:23:32', '432524199712188021', 'twoman.jpeg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '小花', 3111, '湖南工业大学', '女', 'blue', '本科', '甄嬛', NULL, '13034507214', 2, 11, 5, 0, NULL, 'zhenghuan');
+INSERT INTO `aoa_user` VALUES (10, '清华大学', '4444', '2017-10-18 14:26:17', '66@qq.com', 4, '2017-10-07 14:26:37', '432524199712188021', 'handsome.JPG', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '花红', 2555, '湖大', '女', 'green', '本科', '无双', NULL, '13117336954', 2, 12, 5, 0, NULL, 'wushuang');
+INSERT INTO `aoa_user` VALUES (11, '中南大学', '6666', '2017-10-07 14:27:54', '1057@qq.com', 4, '2017-10-07 14:28:06', '5824566822688', 'threeman.jpeg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '兰瑞', 5000, '中南', '男', 'yellow', '硕士', '瑞王', NULL, '13117336953', 2, 13, 5, 0, NULL, 'ruiwang');
+INSERT INTO `aoa_user` VALUES (12, '泰山西路', '62175555555555444', '1986-02-03 00:00:00', 'aaluoxiang@foxmail.com', 4, '2014-09-19 16:57:21', '510322198602030429', 'fiveman.jpeg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '雨果', 2000, '湖南工业大学', '男', 'red', '本科', '丹琪', NULL, '13117336953', 2, 14, 5, 0, NULL, 'danqi');
+INSERT INTO `aoa_user` VALUES (13, '湖南工业大学', '12345', '1994-03-28 00:00:00', '255@qq.com', 4, '2014-09-19 17:00:21', '510322199403280426', 'fourman.jpeg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '毛羽', 1000, '中南大学', '女', 'blue', '硕士', '于彤', NULL, '13117336954', 2, 15, 5, 0, NULL, 'yutong');
+INSERT INTO `aoa_user` VALUES (14, '中国广东', '123478', '1995-03-05 00:00:00', '164@qq.com', 5, '2017-10-05 15:20:39', '510322199503052485', 'nineman.jpeg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '黑椰', 1000, '湖南大学', '女', 'green', '硕士', '盛如思', NULL, '18868688866', 3, 21, 5, 0, NULL, 'shengrusi');
+INSERT INTO `aoa_user` VALUES (15, '中国广东', '6666', '1994-09-19 16:52:11', '173@126.com', 5, '2017-10-02 15:20:39', '432524199612188018', 'oneman.jpeg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '车寿山', 3000, '清华大学', '男', 'yellow', '硕士', '李楚堂', NULL, '13117336953', 3, 22, 5, 0, NULL, 'lichutang');
+INSERT INTO `aoa_user` VALUES (16, '清华大学', '7777', '1996-09-19 16:56:50', '188@qq.com', 5, '2017-10-11 14:23:32', '432524199612188016', 'sevenman.jpeg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '白秋生', 4000, '中南大学', '男', 'red', '博士', '支晓璇', NULL, '13117336954', 3, 23, 5, 0, NULL, 'zhixiaoxuan');
+INSERT INTO `aoa_user` VALUES (17, '中南大学', '9999', '1997-09-19 16:59:29', '188@qq.com', 6, '2017-10-07 14:26:37', '432524199712188019', 'sixman.jpeg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '饶子和', 3700, '上海交大', '女', 'blue', '本科', '薛邵琴', NULL, '13034507214', 4, 16, 5, 0, NULL, 'xueshanqin');
+INSERT INTO `aoa_user` VALUES (18, '泰山西路', '6666', '2017-10-01 15:20:20', '188@qq.com', 6, '2017-10-07 14:28:06', '432524199712188020', 'handsome.JPG', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '王秋阳', 5000, '湖南工业大学', '男', 'green', '本科', '光宇', NULL, '13117336954', 4, 17, 5, 0, NULL, 'guangyu');
+INSERT INTO `aoa_user` VALUES (19, '湖南工业大学', '62175555555555444', '2017-10-04 15:20:20', '55@qq.com', 6, '2014-09-19 16:57:21', '432524199712188021', '74c43897-d08b-409d-8b90-7fa3d681fef5.jpg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '叶知秋', 5000, '湖南工业大学', '女', 'yellow', '本科', '朱茵', NULL, '13117336953', 4, 18, 5, 0, NULL, 'zhuyin');
+INSERT INTO `aoa_user` VALUES (20, '中国广东', '5555444', '2017-10-03 14:23:10', '66@qq.com', 6, '2014-09-19 16:57:21', '432524199712188021', 'fiveman.jpeg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '刘湛秋', 3111, '湖南工业大学', '女', 'red', '本科', '朱颖', NULL, '13117336953', 4, 19, 5, 0, NULL, 'zhuyin');
+INSERT INTO `aoa_user` VALUES (21, '中国广东', '4444', '2017-10-18 14:26:17', '88@qq.com', 6, '2014-09-19 16:57:21', '432524199712188021', 'fourman.jpeg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '李发友', 2555, '湖大', '女', 'blue', '本科', '杨晓木', NULL, '18868688866', 4, 20, 5, 0, NULL, 'yangxiaomu');
+INSERT INTO `aoa_user` VALUES (22, '清华大学', '6666', '2017-10-07 14:27:54', '1057@qq.com', 7, '2014-09-19 16:57:21', '5824566822688', 'nineman.jpeg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '金燕西', 5000, '中南', '男', 'green', '硕士', '陈晓吉', NULL, '13117336953', 5, 8, 5, 0, NULL, 'chenxiaoji');
+INSERT INTO `aoa_user` VALUES (23, '中南大学', '6666\r\n62175555555555444\r\n12345', '2017-10-07 14:27:54', 'aaluoxiang@foxmail.com', 7, '2014-09-19 16:57:21', '25852255', 'oneman.jpeg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '修璃', 6000, '中南', '女', 'yellow', '博士', '刘恋', '', '13117336954', 5, 9, 5, 0, NULL, 'liulian');
+INSERT INTO `aoa_user` VALUES (24, '中南大学', '6666\r\n62175555555555444\r\n12345', '2017-10-07 14:27:54', 'aaluoxiang@foxmail.com', 7, '2014-09-19 16:57:21', '25852255', 'fourman.jpeg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '张柳', 6000, '中南', '女', 'yellow', '博士', '张柳', '', '13117336954', 5, 9, 5, 0, NULL, 'zhangliu');
+INSERT INTO `aoa_user` VALUES (25, '湖南工业大学', '62175555555555444', '2017-10-04 15:20:20', '55@qq.com', 6, '2014-09-19 16:57:21', '432524199712188021', '74c43897-d08b-409d-8b90-7fa3d681fef5.jpg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '张秋', 5000, '湖南工业大学', '女', 'yellow', '本科', '张秋', NULL, '13117336953', 4, 18, 5, 0, NULL, 'zhangqiu');
+INSERT INTO `aoa_user` VALUES (26, '清华大学', '7777', '1996-09-19 16:56:50', '188@qq.com', 5, '2017-10-11 14:23:32', '432524199612188016', 'sevenman.jpeg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '张秋生', 4000, '中南大学', '男', 'red', '博士', '张秋生', NULL, '13117336954', 3, 23, 5, 0, NULL, 'zhangqiusheng');
+INSERT INTO `aoa_user` VALUES (27, '中国广东', '4444', '2017-10-18 14:26:17', '88@qq.com', 6, '2014-09-19 16:57:21', '432524199712188021', 'fourman.jpeg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '张宇', 2555, '湖大', '女', 'blue', '本科', '张宇', NULL, '18868688866', 4, 20, 5, 0, NULL, 'zhangyu');
+INSERT INTO `aoa_user` VALUES (28, '中国广东', '55555', '2017-10-14 21:51:42', '55@qq.com', 4, '2017-10-14 21:52:15', '432524199712188021', 'fourman.jpeg', 0, NULL, NULL, NULL, NULL, 'e10adc3949ba59abbe56e057f20f883e', '薛之谦', 222, '湖大', '男', 'blue', '硕士', '上上签', NULL, '18868688866', 2, 10, 6, 0, NULL, 'shangshangqian');
 COMMIT;
 
 -- ----------------------------
@@ -5223,7 +5231,7 @@ CREATE TABLE `aoa_user_login_record` (
   PRIMARY KEY (`record_id`),
   KEY `FKks6qpqj3ss4e4timjt0xok1p0` (`user_id`),
   CONSTRAINT `FKks6qpqj3ss4e4timjt0xok1p0` FOREIGN KEY (`user_id`) REFERENCES `aoa_user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=104 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=114 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of aoa_user_login_record
@@ -5332,6 +5340,16 @@ INSERT INTO `aoa_user_login_record` VALUES (100, 'Chrome/63.0.3239.132', '192.16
 INSERT INTO `aoa_user_login_record` VALUES (101, 'Chrome/64.0.3282.186', '192.168.1.104', '2018-03-01 19:13:19', NULL, 5);
 INSERT INTO `aoa_user_login_record` VALUES (102, 'Chrome/64.0.3282.186', '192.168.1.104', '2018-03-01 19:17:50', NULL, 5);
 INSERT INTO `aoa_user_login_record` VALUES (103, 'Chrome/64.0.3282.186', '192.168.1.104', '2018-03-01 19:21:39', NULL, 1);
+INSERT INTO `aoa_user_login_record` VALUES (104, 'Chrome 9/92.0.4515.131', '10.15.100.6', '2021-08-13 17:35:05', NULL, 1);
+INSERT INTO `aoa_user_login_record` VALUES (105, 'Chrome 9/92.0.4515.131', '127.0.0.1', '2021-08-13 17:47:03', NULL, 1);
+INSERT INTO `aoa_user_login_record` VALUES (106, 'Chrome 9/92.0.4515.131', '10.15.100.6', '2021-08-20 10:17:21', NULL, 1);
+INSERT INTO `aoa_user_login_record` VALUES (107, 'Chrome 9/92.0.4515.131', '10.15.100.6', '2021-08-20 10:32:23', NULL, 1);
+INSERT INTO `aoa_user_login_record` VALUES (108, 'Chrome 9/92.0.4515.131', '10.15.100.6', '2021-08-20 10:36:12', NULL, 1);
+INSERT INTO `aoa_user_login_record` VALUES (109, 'Chrome 9/92.0.4515.131', '127.0.0.1', '2021-08-20 10:58:29', NULL, 1);
+INSERT INTO `aoa_user_login_record` VALUES (110, 'Chrome 9/97.0.4692.71', '127.0.0.1', '2022-01-26 10:41:38', NULL, 1);
+INSERT INTO `aoa_user_login_record` VALUES (111, 'Chrome 10/100.0.4896.127', '10.15.82.63', '2022-05-05 12:50:51', NULL, 1);
+INSERT INTO `aoa_user_login_record` VALUES (112, 'Chrome 10/109.0.0.0', '10.15.80.225', '2023-02-28 16:49:57', NULL, 1);
+INSERT INTO `aoa_user_login_record` VALUES (113, 'Chrome 10/109.0.0.0', '127.0.0.1', '2023-02-28 17:02:49', NULL, 5);
 COMMIT;
 
 -- ----------------------------
@@ -5452,6 +5470,26 @@ INSERT INTO `aoa_vote_titles` VALUES (32, '#b90601', '范德萨', 11);
 INSERT INTO `aoa_vote_titles` VALUES (33, '#4c6a51', '电风扇', 11);
 INSERT INTO `aoa_vote_titles` VALUES (34, '#4504de', '范德萨', 12);
 INSERT INTO `aoa_vote_titles` VALUES (35, '#530145', '地方撒', 12);
+COMMIT;
+
+-- ----------------------------
+-- Table structure for type_test
+-- ----------------------------
+DROP TABLE IF EXISTS `type_test`;
+CREATE TABLE `type_test` (
+  `time` datetime DEFAULT NULL,
+  `type` varchar(255) NOT NULL,
+  `value` float(255,0) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of type_test
+-- ----------------------------
+BEGIN;
+INSERT INTO `type_test` VALUES ('2021-09-23 17:56:53', '过桥费', 100);
+INSERT INTO `type_test` VALUES ('2021-09-15 17:57:40', '加油费', 102);
+INSERT INTO `type_test` VALUES ('2022-08-18 17:58:01', '过桥费', 32);
+INSERT INTO `type_test` VALUES ('2021-08-13 17:58:26', '其他费用', 43);
 COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;
